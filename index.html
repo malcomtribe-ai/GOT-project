@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Thrones | Casas & Destinos </title>
+    <link rel="icon" href="./assets/image/logo-got.png" type="image/png">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <h1 class="logo">Bem-vindos a Westeros</h1>
+            <ul class="nav-list">
+                <li><a href="#houses">Casas</a></li>
+                <li><a href="#characters">Personagens</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Abrir menu">
+
+            </button>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-atmosphere"></div>
+        <div class="hero-content">
+            <h2>Winter is coming</h2>
+            <p>Explore as grandes casas de Westeros.</p>
+            <a href="#houses" class="btn-primary">Explorar casas</a>
+        </div>
+    </section>
+
+    <section id="houses" class="houses container">
+        <h2 class="section-title">Principais casas de Westeros</h2>
+
+        <section class="filters">
+            <button data-filter="all" class="active">Todas</button>
+            <button data-filter="stark">Stark</button>
+            <button data-filter="lannister">Lannister</button>
+            <button data-filter="targaryen">Targaryen</button>
+            <button data-filter="baratheon">Baratheon</button>
+            <button data-filter="greyjoy">Greyjoy</button>
+            <button data-filter="tyrell">Tyrell</button>
+
+        </section>
+        <div id="houses-container" class="houses-grid">
+        </div>
+    </section>
+
+
+    <section id="characters" class="characters container">
+        <h2>Personagens</h2>
+        <div id="characters-container" class="characters-grid">            
+        </div>
+    </section>
+
+    <section class="map-section">
+        <h2>Mapa de Westeros</h2>
+        <div class="map-container">
+            <img src="./assets/image/map-westoros.png" alt="Mapa de Westeros" class="map-image">
+        </div>
+
+
+    <footer class="footer"> 
+        <p> © 2026 Desenvolvido por Malcom Matheus. Projeto educacional inspirado em Game of Thrones.</p>
+    
+    </footer>
+    
+    <!-- Modal das Casas -->
+    <div class="modal-overlay" id="modal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">×</button>
+            <img id="modalImage" alt="">
+            <h2 id="modalName"></h2>
+            <p id="modalMotto"></p>
+            <p id="modalRegion"></p>
+        </div>
+    </div>
+
+    <!-- Modal dos Personagens -->
+    <div class="modal-overlay" id="character-modal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeCharacterModal">×</button>
+            <img id="characterModalImage" alt="">
+            <h2 id="characterModalName"></h2>
+            <p id="characterModalDescription"></p>
+        </div>
+    </div>
+    
+</body>
+  <script src="./js/script.js"></script>
+</html>
