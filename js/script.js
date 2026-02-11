@@ -132,7 +132,7 @@ const characters = [
   },
   {
   name: "Lord Vareys",
-    house: "mestre dos sussurros",
+    house: "conselheiro",
     image: "./assets/image/lorde.jpeg",
     description: "O mestre dos sussurros, conhecido por sua rede de espionagem e manipulação política."
   },
@@ -168,13 +168,13 @@ const characters = [
   },
    {
   name: "Verme Cinzento",
-    house: "Lider dos Imaculados",
+    house: "Imaculado",
     image: "./assets/image/verme-cinzento.jpeg",
     description: "Líder dos Imaculados, conhecido por sua habilidade em combate e lealdade a Daenerys Targaryen."
   },
    {
   name: "Missandei",
-    house: "A conselheira de Daenerys",
+    house: "conselheira",
     image: "./assets/image/missandei.jpeg",
     description: "A conselheira de Daenerys Targaryen, conhecida por sua sabedoria e lealdade."
   },
@@ -186,7 +186,7 @@ const characters = [
   },
    {
   name: "Melisandre",
-    house: "Sacerdotisa do Senhor da Luz",
+    house: "Sacerdotisa",
     image: "./assets/image/melisandre.jpeg",
     description: "Uma sacerdotisa do Senhor da Luz, conhecida por seus poderes místicos e influência política."
   },
