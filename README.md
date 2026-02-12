@@ -30,7 +30,7 @@ https://malcomtribe-ai.github.io/GOT-project/
 
 <p>Manipular dados usando <b>JavaScript</b></p>  
 
-<p>Criar componentes dinâmicos (cards das casas e dos persoganes)</p> 
+<p>Criar componentes dinâmicos (cards das casas e dos personagens)</p> 
 <p>Tornar responsivo para <b>desktop/mobile</b></p>
 
 <p>Organizar código como um projeto real</p>
@@ -75,13 +75,31 @@ https://malcomtribe-ai.github.io/GOT-project/
 Estruturação de projeto para portfólio
 
 <h3>📂 Estrutura do Projeto</h3>
-<p>📁 GOT-projet</p> 
-<p> ├── index.html</p>
-<p> ├── style.css</p>
-<p> ├── script.js</p>
-<p> └── assets/</p>
- <p>    └── imagens</p>
+
+<p>📁 GOT-project</p> 
+<p>├── index.html</p>
+<p> ├── css/</p>
+<p> │    └── style.css</p> 
+<p> ├── js/</p>
+<p> │    └── script.js</p> 
+<p> └── assets/</p> 
+<p>     └── imagens</p> 
  <br>
+<h3>▶️ Como Executar o Projeto Localmente</h3>
+
+<p>Siga os passos abaixo para rodar o projeto na sua máquina:</p> 
+
+<p>1. Clone o repositório:</p> 
+<p>git clone https://github.com/malcomtribe-ai/GOT-project.git</p>
+
+
+<p>2. Acesse a pasta do projeto:</p>
+<p>cd GOT-project</p>
+
+<p>3. Abra o arquivo `index.html` no navegador.</p> 
+
+<p>Pronto! O projeto já estará funcionando localmente.</p> 
+
 <h3>💡 Próximas Melhorias</h3>
 
 <p>Adicionar animações nos cards</p>  
