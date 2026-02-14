@@ -4,90 +4,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game of Thrones | Casas & Destinos </title>
+    <meta name="description"
+        content="Explore o mundo épico de Game of Thrones - Casas Nobres, Personagens Lendários e o Mapa de Westeros">
+    <meta name="keywords" content="Game of Thrones, Westeros, Casas Nobres, GOT, HBO">
+    <title>Game of Thrones | As Crônicas de Westeros</title>
+
     <link rel="icon" href="./assets/image/logo-got.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link rel="stylesheet" href="./css/style.css">
+
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        body.loaded {
+            overflow: auto;
+        }
+    </style>
 </head>
 
 <body>
+
+
+    <div id="loading-screen">
+        <div class="loading-glow"></div>
+        <div class="loading-particles" id="particles"></div>
+
+        <img src="./assets/image/logo-got.png" alt="Game of Thrones Logo" class="loading-logo">
+
+        <div class="loading-container">
+            <h1 class="loading-title">GAME OF THRONES</h1>
+            <p class="loading-subtitle">Preparando sua jornada em Westeros</p>
+
+            <div class="loading-progress">
+                <div class="loading-progress-fill"></div>
+            </div>
+
+            <p class="loading-text">Iniciando...</p>
+
+            <button id="enter-westeros" class="enter-button">
+                COMEÇAR
+            </button>
+        </div>
+    </div>
+
+    <div class="music-control playing" id="music-toggle" title="Controlar música de fundo">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+        </svg>
+    </div>
+
     <header class="header">
         <nav class="nav container">
-            <h1 class="logo">Bem-vindos a Westeros</h1>
+            <h1><a href="#home" class="logo">⚔ WESTEROS ⚔</h1>
             <ul class="nav-list">
-                <li><a href="#houses">Casas</a></li>
+                <li><a href="#houses">Casas Nobres</a></li>
                 <li><a href="#characters">Personagens</a></li>
+                <li><a href="#map">Mapa</a></li>
             </ul>
-            <button class="menu-toggle" aria-label="Abrir menu">
-
-            </button>
+            <button class="menu-toggle" aria-label="Abrir menu">☰</button>
         </nav>
     </header>
+
     <section class="hero">
         <div class="hero-atmosphere"></div>
         <div class="hero-content">
-            <h2>Winter is coming</h2>
-            <p>Explore as grandes casas de Westeros.</p>
-            <a href="#houses" class="btn-primary">Explorar casas</a>
+            <h2 id="home">WINTER IS COMING</h2>
+            <p>
+                Adentre o reino épico de Westeros. Descubra as grandes casas nobres,
+                conheça personagens lendários e explore os Sete Reinos.
+            </p>
+            <a href="#houses" class="btn-primary">Explorar os Sete Reinos</a>
         </div>
     </section>
 
     <section id="houses" class="houses container">
-        <h2 class="section-title">Principais casas de Westeros</h2>
+        <h2 class="section-title">As Grandes Casas de Westeros</h2>
 
-        <section class="filters">
-            <button data-filter="all" class="active">Todas</button>
-            <button data-filter="stark">Stark</button>
-            <button data-filter="lannister">Lannister</button>
-            <button data-filter="targaryen">Targaryen</button>
-            <button data-filter="baratheon">Baratheon</button>
-            <button data-filter="greyjoy">Greyjoy</button>
-            <button data-filter="tyrell">Tyrell</button>
 
-        </section>
-        <div id="houses-container" class="houses-grid">
+        <div class="filters">
+            <button data-filter="all" class="active">
+                <span>Todas as Casas</span>
+            </button>
+            <button data-filter="stark">
+                <span>Stark</span>
+            </button>
+            <button data-filter="lannister">
+                <span>Lannister</span>
+            </button>
+            <button data-filter="targaryen">
+                <span>Targaryen</span>
+            </button>
+            <button data-filter="baratheon">
+                <span>Baratheon</span>
+            </button>
+            <button data-filter="greyjoy">
+                <span>Greyjoy</span>
+            </button>
+            <button data-filter="tyrell">
+                <span>Tyrell</span>
+            </button>
+        </div>
+
+
+        <div id="houses-container" class="houses-grid"></div>
+    </section>
+
+    <section id="characters" class="characters">
+        <div class="container">
+            <h2>Personagens Lendários</h2>
+
+            <div id="characters-container" class="characters-grid"></div>
         </div>
     </section>
 
-
-    <section id="characters" class="characters container">
-        <h2>Personagens</h2>
-        <div id="characters-container" class="characters-grid">            
-        </div>
-    </section>
-
-    <section class="map-section">
+    <section id="map" class="map-section">
         <h2>Mapa de Westeros</h2>
-        <div class="map-container">
-            <img src="./assets/image/map-westoros.png" alt="Mapa de Westeros" class="map-image">
+        <div class="map-container" data-reveal>
+            <img src="./assets/image/map-westoros.png" alt="Mapa detalhado de Westeros e os Sete Reinos"
+                class="map-image">
         </div>
+    </section>
 
-
-    <footer class="footer"> 
-        <p> © 2026 Desenvolvido por Malcom Matheus. Projeto educacional inspirado em Game of Thrones.</p>
-    
+    <footer class="footer">
+        <div class="container">
+            <p>
+                © 2026 Desenvolvido por <strong>Malcom Matheus</strong><br>
+                Projeto educacional inspirado em Game of Thrones<br>
+                <em>"When you play the game of thrones, you win or you die."</em>
+            </p>
+        </div>
     </footer>
-    
-    <!-- Modal das Casas -->
+
     <div class="modal-overlay" id="modal">
         <div class="modal-content">
-            <button class="close-modal" id="closeModal">×</button>
+            <button class="close-modal" id="closeModal" aria-label="Fechar modal">×</button>
             <img id="modalImage" alt="">
             <h2 id="modalName"></h2>
-            <p id="modalMotto"></p>
+            <p id="modalMotto" style="font-style: italic; font-size: 1.3rem; margin-bottom: 1.5rem;"></p>
             <p id="modalRegion"></p>
         </div>
     </div>
 
-    <!-- Modal dos Personagens -->
     <div class="modal-overlay" id="character-modal">
         <div class="modal-content">
-            <button class="close-modal" id="closeCharacterModal">×</button>
-            <img id="characterModalImage" alt="">
+            <button class="close-modal" id="closeCharacterModal" aria-label="Fechar modal">×</button>
+            <img id="characterModalImage" alt="" style="max-width: 200px; border-radius: 8px;">
             <h2 id="characterModalName"></h2>
             <p id="characterModalDescription"></p>
         </div>
     </div>
-    
+
+
+    <script src="./js/audio.js"></script>
+
+
+    <script src="./js/loading.js"></script>
+
+
+    <script src="./js/script.js"></script>
+
+
+    <script>
+
+        const particlesContainer = document.getElementById('particles');
+        if (particlesContainer) {
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                particle.style.animationDelay = Math.random() * 5 + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+
+        const musicToggle = document.getElementById('music-toggle');
+        if (musicToggle) {
+            musicToggle.addEventListener('click', () => {
+                const isPlaying = window.gameOfThronesAudio.toggle();
+                musicToggle.classList.toggle('playing', isPlaying);
+            });
+        }
+    </script>
+
+
+    <script>
+
+        window.addEventListener('load', () => {
+            const loadTime = performance.now();
+            console.log(`⚔️ Página carregada em ${Math.round(loadTime)}ms`);
+        });
+    </script>
+
 </body>
-  <script src="./js/script.js"></script>
+
 </html>
