@@ -55,7 +55,7 @@ const houses = [
     motto: "As High as Honor",
     region: "Vale de Arryn",
     image: "./assets/image/logo-arryn.png",
-    theme: "Arryn",
+    theme: "arryn",
     description:"Soberanos do Vale e detentores da mais pura linhagem Ândala. Vivem no Ninho da Águia, uma fortaleza impenetrável no topo das montanhas, e prezam pela honra e pelo isolamento estratégico acima de tudo."
 },
 {
