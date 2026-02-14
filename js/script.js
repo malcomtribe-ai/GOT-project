@@ -49,7 +49,23 @@ const houses = [
     image: "./assets/image/logo-tyrell.PNG",
     theme: "tyrell",
     description: "Senhores de Jardim de Cima, os Tyrell controlam as terras mais férteis de Westeros e são mestres em política e diplomacia."
-  }
+  },
+{
+    name: "Casa Arryn",
+    motto: "As High as Honor",
+    region: "Vale de Arryn",
+    image: "./assets/image/logo-arryn.png",
+    theme: "Arryn",
+    description:"Soberanos do Vale e detentores da mais pura linhagem Ândala. Vivem no Ninho da Águia, uma fortaleza impenetrável no topo das montanhas, e prezam pela honra e pelo isolamento estratégico acima de tudo."
+},
+{
+    name: "Casa Tully",
+    motto: "Family, Duty, Honor",
+    region: "As Terras do Rio",
+    image: "./assets/image/logo-tully.png",
+    theme: "tully",
+    description: "Senhores de Correrrio e protetores das ricas bacias fluviais de Westeros. Conhecidos por sua lealdade inabalável aos laços de sangue, governam uma região central constantemente cercada por conflitos e exércitos rivais."
+}
 ];
 
 const characters = [
@@ -539,5 +555,13 @@ if ('IntersectionObserver' in window) {
         imageObserver.observe(img);
     });
 }
+
+const toggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.nav-list');
+
+toggle.addEventListener('click', () => {
+  nav.classList.toggle('active');
+});
+
 
 });
