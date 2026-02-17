@@ -378,14 +378,6 @@ houseFilterButtons.forEach(button => {
                 }
             }, index * 50);
         });
-        
-        // ADICIONE ESTAS LINHAS AQUI:
-        setTimeout(() => {
-            document.querySelector('#houses').scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }, 300); // Espera um pouco para a animação dos cards
     });
 });
 
